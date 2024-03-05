@@ -49,9 +49,11 @@
             } 
 
             //stampa del prezzo finale del biglietto e dello sconto applicato
-            const stringPrice = price.toFixed(2); //string
-            const stringDiscount = discount.toFixed(2) //string
-            
-            console.log ('il prezzo del biglietto è: ' + stringPrice + '€. Lo sconto che è stato applicato è di: ' + stringDiscount + '€');
+                //dichiarazione e assegnazione delle variabili approssimate al secondo decimale
+                const stringPrice = price.toFixed(2); //string
+                const stringDiscount = discount.toFixed(2) //string
+
+                //stampa in console dell'output
+                console.log ('il prezzo del biglietto è: ' + stringPrice + '€. Lo sconto che è stato applicato è di: ' + stringDiscount + '€');
     });
        
