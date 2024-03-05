@@ -61,8 +61,10 @@ submitElement.addEventListener('click',function(){
                     //stampa del paragrafo nella pagina html
                     tiketElement.innerHTML += `
                     <h2>Il tuo biglietto</h2>
+                    <div class=" calculator">
                     <h3>${name}</h3>
-                    <p>Il prezzo del biglietto è di: ${stringFirstPrice}€. Lo sconto applicato è di ${stringDiscount}€. Il totale da pagare per il biglietto è di ${stringPrice}€.</p>`;
+                    <p>Il prezzo del biglietto è di: ${stringFirstPrice}€. Lo sconto applicato è di ${stringDiscount}€. Il totale da pagare per il biglietto è di ${stringPrice}€.</p>
+                    </div>`;
 
             //disabilita il bottone dopo il primo utilizzo    
             document.getElementById('submit').disabled = true;
