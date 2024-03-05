@@ -11,15 +11,14 @@
     const inputKmElement = document.getElementById('km');
 
     // associare la text area dell'età ad una variabile
-    const inputAgeElement = document.getElementById('age');
+    const inputAgeElement = document.getElementById('discount');
 
     //dichiarazione delle variabili
     let km = 0, 
         age = 0,
         price = 0, 
-        discount = 0; //number
-
-    console.log(km,age,price,discount);
+        discount = 0,
+        finalPrice = 0; //number
 
     //ascolto del click sul bottone
     submitElement.addEventListener('click',function(){
@@ -27,33 +26,35 @@
          //lettura del dato km e assegnazione alla variabile km
         km = parseFloat(inputKmElement.value); //number
 
-        //lettura del dato age e assegnazione alla variabile age
-        age = parseInt(inputAgeElement.value); //number
-
-        console.log(km,age);
+        //lettura del valore del select e assegnazione alla variabile age
+        age = (inputAgeElement.value); //string
         
         //calcolo del prezzo del biglietto
             // calcolo del prezzo base del biglietto
             price = km*0.21; //number
+            finalPrice = price; //number
 
-            console.log (price);
-
-            // applicazione dell'eventuale sconto
-            if (age < 18){
+            // applicazione dell'eventuale sconto 
+            if (age === 'underage'){
                 discount = price*0.2; //number
-                price -= discount; //number
+                finalPrice = price - discount; //number
             } 
-            if (age >= 65){
+            if (age === 'senior'){
                 discount = price*0.4; //number
-                price -= discount; //number
+                finalPrice = price - discount; //number
             } 
 
             //stampa del prezzo finale del biglietto e dello sconto applicato
                 //dichiarazione e assegnazione delle variabili approssimate al secondo decimale
-                const stringPrice = price.toFixed(2); //string
+                const stringPrice = finalPrice.toFixed(2); //string
                 const stringDiscount = discount.toFixed(2) //string
 
-                //stampa in console dell'output
-                console.log ('il prezzo del biglietto è: ' + stringPrice + '€. Lo sconto che è stato applicato è di: ' + stringDiscount + '€');
+                // stampe del biglietto nella pagina
+                //associazione del paragrafo ad una variabile
+                const tiketElement =document.getElementById('tiket');
+                
+                tiketElement.innerHTML += `
+                <h2>Il tuo biglietto</h2>
+                <p>Il prezzo del biglietto è di: ${price}€. Lo sconto applicato è di ${stringDiscount}€. Il totale da pagare per il biglietto è di ${stringPrice}€.</p>`;
     });
        

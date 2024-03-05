@@ -14,11 +14,17 @@
                 <input type="text" value="km" id="km" placeholder="km">
             </div>
             <div>
-                <label for="age">Inserire l'età del passeggero</label>
-                <input type="text" value="age" id="age" placeholder="età">
+                <label for="discount">Seleziona la fascia di età per lo sconto</label>
+                <select name="discount" id="discount">
+                    <option value="default">Nessuno sconto</option>
+                    <option value="underage"> Sconto minorenni 20%</option>
+                    <option value="senior"> Sconto anziani over 65 40%</option>
+                </select>
             </div>
             <div>
                 <button class="btn" id="submit">Invia</button>
+            </div>
+            <div id="tiket">
             </div>
         </div>
     </main>
