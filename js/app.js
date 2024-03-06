@@ -86,7 +86,7 @@ submitElement.addEventListener('click',function(){
                             </div>
                             <div class="col">
                                 <h4> Prezzo </h4>
-                                <h3> ${stringPrice}</h3>
+                                <h3> ${stringPrice}€</h3>
                             </div>
                         </div>
                     </div>                     
