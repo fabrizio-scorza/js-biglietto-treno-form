@@ -64,30 +64,32 @@ submitElement.addEventListener('click',function(){
                     //stampa del paragrafo nella pagina html
                     tiketElement.innerHTML += `
                     <h2>Il tuo biglietto</h2>
-                    <div class=" calculator row">
-                        <div class="col-2">
-                            <h4> Nome del passeggero</h4>
-                            <h3>${name}</h3>
+                    <div class=" ticket flex">
+                        <div class=" ticket-head flex">
+                            <div class="col">
+                                <h4> Nome del passeggero</h4>
+                                <h3>${name}</h3>
+                            </div>
                         </div>
-                        <div class="col-10 flex">
-                            <div>
+                        <div class=" ticket-body flex">
+                            <div class="col">
                                 <h4> Tariffa </h4>
                                 <h3> ${tariffa}</h3>
                             </div>
-                            <div>
+                            <div class="col">
                                 <h4> Posto </h4>
                                 <h3> Posto non numerato</h3>
                             </div>
-                            <div>
+                            <div class="col">
                                 <h4> Tratta in km</h4>
                                 <h3> ${km}</h3>
                             </div>
-                            <div>
+                            <div class="col">
                                 <h4> Prezzo </h4>
                                 <h3> ${stringPrice}</h3>
-                            </div>    
+                            </div>
                         </div>
-                    </div>
+                    </div>                     
                     <p>Il prezzo del biglietto è di: ${stringFirstPrice}€. Lo sconto applicato è di ${stringDiscount}€. Il totale da pagare per il biglietto è di ${stringPrice}€.</p>`;
 
             //disabilita il bottone dopo il primo utilizzo    
